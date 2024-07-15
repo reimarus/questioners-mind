@@ -3,7 +3,8 @@ Overview
 This document outlines the core rules, guidelines, and principles for our personal blog and legacy website. It serves as a reference for both product managers and developers to ensure consistency in design, functionality, and user experience.
 
 **General Rules**
-- Write your test cases first as they provide the parameters for all code included on top. 
+- Test Cases: Write your test cases first as they provide the parameters for all code included on top. 
+- Author Name: All instances of the author's name should be "Ryan Oskvarek".
 
 **Design Rules**
 
