@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMs, Your User Research Best Friend - Your Name's Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --black: #000000;
+            --cyan: #00FFFF;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--black);
+        }
+        header {
+            background: var(--gold);
+            color: var(--black);
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before, header::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background: 
+                linear-gradient(45deg, var(--black) 25%, transparent 25%) -10px 0,
+                linear-gradient(-45deg, var(--black) 25%, transparent 25%) -10px 0,
+                linear-gradient(45deg, transparent 75%, var(--black) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--black) 75%);
+            background-size: 20px 20px;
+        }
+        header::before {
+            top: 0;
+        }
+        header::after {
+            bottom: 0;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+        }
+        h1::before, h1::after {
+            content: "◆";
+            color: var(--black);
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h1::before {
+            left: -2rem;
+        }
+        h1::after {
+            right: -2rem;
+        }
+        nav {
+            background: var(--black);
+            color: var(--white);
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article {
+            background-color: var(--white);
+            padding: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            border: 2px solid var(--gold);
+        }
+        article::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid var(--gold);
+            pointer-events: none;
+        }
+        h2 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--black);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 0.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h1::before, h1::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ryan Oskvarek's Blog</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>LLMs, Your User Research Best Friend</h2>
+            
+            <h3>Scaling User Research with LLMs</h3>
+            <p>In the dynamic world of product development, understanding user and customer problems is paramount. Yet, so often, user research is done on a case by case basis and is local to each product manager. This is where Large Language Models (LLMs) come into play, acting not just as a tool but as a teammate in the user research process. Let's delve into how LLMs can transform user research, making it more efficient and insightful for the whole product team.</p>
+            
+            <h3>Let's investigate three themes</h3>
+            <ol>
+                <li>Record and transcribe every interview</li>
+                <li>Central storage</li>
+                <li>Theme extraction</li>
+            </ol>
+            
+            <h3>Record and Transcribe</h3>
+            <p>User interviews are a goldmine of insights, but the richness of these conversations is often lost in summary notes or, worse, never captured due to resource constraints. LLMs can transcribe these interviews verbatim, ensuring no detail is overlooked. This transcription process is not only faster but also less prone to human error, capturing nuances in user responses that might be critical for understanding their experiences and expectations.</p>
+            
+            <h3>Central Storage</h3>
+            <p>Enterprises across the world are working on effectively managing their data. Product needs to be doing the same thing. Build a place for product managers to put their recordings and transcripts. This setup ensures that product managers, regardless of their specific products, can leverage the full breadth of user research insights. It fosters a culture of shared learning and data-driven decision-making across the team.</p>
+            
+            <h3>Theme Extraction</h3>
+            <p>So now you have transcripts available to the enterprise, what can you do with them now? Identify common themes and patterns! LLMs, with their advanced natural language processing capabilities, can automate this process. Giving every product manager access to every user research interview conducted reduces a primary product risk, oversampling from a small, potentially unrepresentative sample of interviews for product decisions. Now the entire corpus of user feedback is a deep library waiting to be researched!</p>
+            <p>They can then work with LLMs to discover recurring themes, sentiments, and even unexpected insights that would have never happened prior to the world of LLMs. This capability allows teams to quickly get to the heart of user feedback, transforming raw data into actionable insights.</p>
+            
+            <h3>Conclusion</h3>
+            <p>In conclusion, the integration of LLMs into the user research process offers a transformative potential for product teams. By automating transcription, theme extraction, and data analysis, LLMs free up human researchers to focus on the more nuanced aspects of user research, such as empathy and creative problem-solving. Moreover, the centralization of data ensures that insights are shared and leveraged across teams, driving more cohesive and user-centered product development. As we continue to explore the capabilities of LLMs, their role in user research seems not just promising but indispensable.</p>
+            
+            <h3>Key Benefits of LLMs in User Research</h3>
+            <ul>
+                <li>Making transcripts of every user interview</li>
+                <li>Theme extraction</li>
+                <li>Data evaluation across larger sets</li>
+                <li>Question prep</li>
+                <li>Centrally locate so all product manages get the benefit of the massive amount of data</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ryan Oskvarek. All rights reserved.</p>
+    </footer>
+</body>
+</html>
