@@ -1,11 +1,12 @@
-/* Master CSS for Art Deco-inspired Personal Website - Dark Mode */
+/* Master CSS for Nature-Inspired Personal Website - Dark Mode */
 
 :root {
-    --primary: #00FFFF; /* Cyan */
-    --secondary: #FF00FF; /* Magenta */
-    --accent: #FFFFFF; /* White */
-    --background: #121212; /* Dark gray */
-    --text: #E0E0E0; /* Light gray */
+    --primary: #1E3A8A; /* Dark blue */
+    --secondary: #065F46; /* Dark green */
+    --accent: #9CA3AF; /* Medium gray */
+    --background: #111827; /* Very dark blue-gray */
+    --text: #E5E7EB; /* Light gray */
+    --text-muted: #6B7280; /* Darker gray for less emphasis */
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 
 header {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: var(--background);
+    color: var(--text);
     text-align: center;
     padding: 2rem 1rem;
     position: relative;
@@ -58,6 +59,7 @@ h1 {
     margin: 0;
     position: relative;
     display: inline-block;
+    color: var(--text);
 }
 
 h1::before, h1::after {
@@ -89,18 +91,6 @@ h3 {
     margin-top: 1.5rem;
 }
 
-
-.blog-post h3 a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.blog-post h3 a:hover {
-    color: var(--secondary);
-    text-decoration: underline;
-}
-
 nav {
     background: var(--background);
     color: var(--text);
@@ -128,7 +118,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 main {
@@ -156,24 +146,20 @@ main {
     pointer-events: none;
 }
 
-.read-more {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary);
-    color: var(--background);
+.blog-post h3 a {
+    color: var(--secondary);
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.read-more:hover {
-    background-color: var(--secondary);
+.blog-post h3 a:hover {
+    color: var(--primary);
+    text-decoration: underline;
 }
 
 footer {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: var(--background);
+    color: var(--text);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
