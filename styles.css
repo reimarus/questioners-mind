@@ -25,6 +25,7 @@ header {
     padding: 2rem 1rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header::before, header::after {
