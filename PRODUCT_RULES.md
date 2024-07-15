@@ -80,6 +80,7 @@ Frontend: HTML5, CSS3, JavaScript (ES6+)
 Static Site Generator: Hugo
 Hosting: Netlify
 Version Control: Git (GitHub)
+All possible CSS is housed in a master css file (styles.css) and this file should be referenced whenever possible
 
 **SEO Rules**
 
