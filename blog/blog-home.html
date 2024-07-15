@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Oskvarek - Personal Blog and Legacy</title>
+    <title>Ryan Oskvarek's Blog - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,12 +46,14 @@
         header::after {
             bottom: 0;
         }
-        h1 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin: 0;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
             position: relative;
             display: inline-block;
         }
@@ -68,13 +70,6 @@
         }
         h1::after {
             right: -2rem;
-        }
-        .accent {
-            font-family: 'Playfair Display', serif;
-            color: var(--black);
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            font-style: italic;
         }
         nav {
             background: var(--black);
@@ -102,16 +97,17 @@
         }
         main {
             padding: 20px;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
         }
-        .section {
-            margin-bottom: 2rem;
-            border: 2px solid var(--gold);
-            padding: 1rem;
+        .blog-post {
+            background-color: var(--white);
+            padding: 2rem;
+            margin-top: 2rem;
             position: relative;
+            border: 2px solid var(--gold);
         }
-        .section::before {
+        .blog-post::before {
             content: '';
             position: absolute;
             top: 10px;
@@ -123,19 +119,33 @@
         }
         h2 {
             color: var(--gold);
-            font-family: 'Playfair Display', serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2rem;
             margin-top: 0;
+        }
+        h3 {
+            color: var(--black);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .read-more:hover {
+            background-color: var(--cyan);
         }
         footer {
             background: var(--black);
             color: var(--white);
             text-align: center;
             padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 2rem;
         }
         @media (max-width: 600px) {
             nav ul {
@@ -156,10 +166,8 @@
 </head>
 <body>
     <header>
-        <h1>Ryan Oskvarek</h1>
-        <p class="accent">Personal Blog and Legacy</p>
+        <h1>Ryan Oskvarek's Blog</h1>
     </header>
-
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -170,41 +178,20 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
     <main>
-        <section id="home" class="section">
-            <h2>Welcome to My Personal Website</h2>
-            <p>This is where I share my thoughts, experiences, and leave a legacy for my children.</p>
-        </section>
-
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Learn more about my professional background and personal journey.</p>
-        </section>
-
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <p>Explore my latest thoughts and insights on various topics.</p>
-            <a href="/workspaces/questioners-mind/blog-home.html" class="read-more">Read More</a>
-        </section>
-        </section>
-
-        <section id="portfolio" class="section">
-            <h2>Portfolio</h2>
-            <p>Check out my professional projects and achievements.</p>
-        </section>
-
-        <section id="legacy" class="section">
-            <h2>Legacy</h2>
-            <p>A special area dedicated to my family and future generations.</p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Get in touch with me for professional inquiries or collaborations.</p>
-        </section>
+        <h2>Latest Blog Posts</h2>
+        <article class="blog-post">
+            <h3>LLMs, Your User Research Best Friend</h3>
+            <p>Discover how Large Language Models (LLMs) are transforming user research in product development. Learn about the benefits of automated transcription, centralized storage, and theme extraction in scaling your user research efforts.</p>
+            <a href="llms-user-research.html" class="read-more">Read More</a>
+        </article>
+        <article class="blog-post">
+            <h3>The Transformation that Sticks: GenAI</h3>
+            <p>Explore the revolutionary impact of Generative AI on business transformations. Unlike previous waves of change, GenAI promises to deliver more sustainable and dramatic improvements across various aspects of business operations.</p>
+            <a href="genai-transformation.html" class="read-more">Read More</a>
+        </article>
+        <!-- Add more blog post summaries here as you create new posts -->
     </main>
-
     <footer>
         <p>&copy; 2024 Ryan Oskvarek. All rights reserved.</p>
     </footer>
