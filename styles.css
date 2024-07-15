@@ -89,6 +89,18 @@ h3 {
     margin-top: 1.5rem;
 }
 
+
+.blog-post h3 a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post h3 a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
 nav {
     background: var(--background);
     color: var(--text);
