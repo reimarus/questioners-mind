@@ -14,13 +14,13 @@
 
     <nav>
         <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about-me.html">About Me</a></li>
-            <li><a href="/blog/blog-home.html">Blog</a></li>
-            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio/about-me.html">About Me</a></li>
+            <li><a href="blog/blog-home.html">Blog</a></li>
+            <li><a href="portfolio/portfolio.html">Portfolio</a></li>
             <li><a href="#legacy">Legacy</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="/product-rules.html">Product Rules</a></li>
+            <li><a href="product-rules.html">Product Rules</a></li>
         </ul>
     </nav>
 
@@ -29,7 +29,7 @@
             <h2>Product Rules and Guidelines</h2>
 
             <h3>Overview</h3>
-            <p>This document outlines the core rules, guidelines, and principles for our personal blog and legacy website. It serves as a reference for both product managers, developers, and AI to ensure consistency in design, functionality, and user experience.</p>
+            <p>This document outlines the core rules, guidelines, and principles for our personal blog and legacy website. It serves as a reference for both product managers and developers to ensure consistency in design, functionality, and user experience.</p>
 
             <h3>Key Concepts and Goals</h3>
             <ul>
@@ -37,12 +37,6 @@
                 <li><strong>Legacy LLM Creation:</strong> The ultimate goal is to document personal perspectives and philosophies to create a fine-tuned LLM as a legacy gift. Content should be crafted with this long-term objective in mind.</li>
                 <li><strong>Time-Stamped Evolution:</strong> All content should be clearly time-stamped to show the evolution of thoughts and philosophies over time.</li>
                 <li><strong>Architecture Decision Records (ADRs):</strong> Follow the open-source community's practice of using ADRs to document decision-making processes and rationales.</li>
-            </ul>
-            <h3>General Rules</h3>
-            <ul>
-                <li>Test Cases: Write your test cases first as they provide the parameters for all code included on top.</li>
-                <li>Author Name: All instances of the author's name should be "Ryan Oskvarek".</li>
-                <li>File Names: Before generating an HTML file, ensure you have the correct file names needed to properly build all links within the site.</li>
             </ul>
 
             <h3>Design Rules</h3>
@@ -56,28 +50,10 @@
                 <li>Text Muted: #6B7280 (Darker gray for less emphasis)</li>
             </ul>
 
-            <h4>Color Choice Rationale:</h4>
-            <p>Our color palette is inspired by nature and modern AI interfaces, creating a harmonious blend of organic elements and technological sophistication. Here's why we chose these colors:</p>
-            <ul>
-                <li>Dark Blue (Primary): Represents deep water or the night sky, evoking a sense of depth and tranquility.</li>
-                <li>Dark Green (Secondary): Symbolizes forests and foliage, bringing in a natural, grounding element.</li>
-                <li>Medium Gray (Accent): Reminiscent of stone or tree bark, providing a neutral tone that complements the primary colors.</li>
-                <li>Very Dark Blue-Gray (Background): Mimics a nighttime natural setting, creating a calm and focused environment for reading and interaction.</li>
-                <li>Light Gray (Text): Ensures readability against the dark background while being gentler on the eyes than pure white.</li>
-                <li>Darker Gray (Text Muted): Offers a way to de-emphasize certain text elements without losing legibility.</li>
-            </ul>
-            <p>This color scheme aims to create a serene, professional atmosphere that's easy on the eyes and reminiscent of both natural environments and modern digital interfaces.</p>
-
-            <h4>Responsive Design:</h4>
-            <p>The site must be fully responsive, providing an optimal experience on devices ranging from mobile phones to large desktop monitors.</p>
-
             <h4>Typography:</h4>
             <p>Use sans-serif fonts throughout the site. The primary font is 'Roboto', with 'Arial' as a fallback.</p>
 
             <h3>Functionality Rules</h3>
-            <h4>Purpose:</h4>
-            <p>The site serves as a personal blog and legacy for children, while also being usable for job searches.</p>
-
             <h4>Core Sections:</h4>
             <ul>
                 <li>Home</li>
@@ -93,21 +69,8 @@
                 <li>Support for text, images, and embedded videos</li>
                 <li>Categorization and tagging of posts</li>
                 <li>Search functionality</li>
-                <li>Comments section (optional)</li>
                 <li>Blog post titles on the home page should serve as links to the full articles, replacing separate "Read More" buttons</li>
                 <li>Avoid duplicating the title within the blog post summary on the home page</li>
-            </ul>
-
-            <h4>Portfolio:</h4>
-            <ul>
-                <li>Showcase of professional projects and achievements</li>
-                <li>Downloadable resume/CV</li>
-            </ul>
-
-            <h4>Legacy Section:</h4>
-            <ul>
-                <li>Password-protected area for family members</li>
-                <li>Ability to store and display various media types (text, images, videos)</li>
             </ul>
 
             <h3>Performance Rules</h3>
@@ -127,11 +90,10 @@
 
             <h3>Technical Stack</h3>
             <ul>
-                <li>Frontend: HTML5, CSS3, JavaScript (ES6+)</li>
-                <li>Static Site Generator: Hugo</li>
-                <li>Hosting: Netlify</li>
+                <li>Frontend: React.js</li>
+                <li>Styling: CSS-in-JS (styled-components)</li>
+                <li>Hosting: TBD</li>
                 <li>Version Control: Git (GitHub)</li>
-                <li>All possible CSS is housed in a master css file (styles.css) and this file should be referenced whenever possible</li>
             </ul>
 
             <h3>SEO Rules</h3>
@@ -145,6 +107,12 @@
             <ul>
                 <li>Before generating HTML files, verify that all necessary file names for internal links are correct and consistent with the planned site structure.</li>
                 <li>Ensure that all links in the navigation and content areas point to the correct files and locations within the site structure.</li>
+            </ul>
+
+            <h3>AI Assistant Rules</h3>
+            <ul>
+                <li>Outside of artifacts, always be as terse as possible with responses for efficient token usage.</li>
+                <li>Avoid unnecessary compliments or elaborations on user ideas.</li>
             </ul>
 
             <p>This document is subject to change. All team members are encouraged to propose updates through pull requests.</p>
