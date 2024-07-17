@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -27,12 +27,12 @@ function App() {
         <Header />
         <Navigation />
         <ContentWrapper>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/portfolio" component={Portfolio} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
         </ContentWrapper>
         <Footer />
       </AppWrapper>
