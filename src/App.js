@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from '/components/header';
-import Navigation from './components/navigation';
-import Home from './pages/home';
-import About from './pages/about';
-import Blog from './pages/blog';
-import Portfolio from './pages/portfolio';
-import Footer from './components/footer';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import About from './pages/About';
+import Blog from './pages/Blog';
+import Portfolio from './pages/Portfolio';
+import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ const AppWrapper = styled.div`
 
 const ContentWrapper = styled.main`
   flex: 1;
+  padding: 2rem;
 `;
 
 function App() {
