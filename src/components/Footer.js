@@ -2,23 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
-  background-color: #111827;
-  color: #E5E7EB;
-  padding: 1rem;
+  background-color: var(--secondary);
+  color: var(--text);
   text-align: center;
-`;
-
-const Copyright = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
+  padding: 1rem;
 `;
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <FooterWrapper>
-      <Copyright>© {currentYear} Ryan Oskvarek. All rights reserved.</Copyright>
+      <p>&copy; 2024 Ryan Oskvarek. All rights reserved.</p>
     </FooterWrapper>
   );
 }

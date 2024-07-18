@@ -4,9 +4,12 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/Blog';
+import About from './pages/AboutMe';
+import Blog from './pages/BlogHome';
 import Portfolio from './pages/Portfolio';
+import Legacy from './pages/Legacy';
+import Contact from './pages/Contact';
+import ProductRules from './pages/ProductRules';
 import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
@@ -32,6 +35,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/legacy" element={<Legacy />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product-rules" element={<ProductRules />} />
           </Routes>
         </ContentWrapper>
         <Footer />
