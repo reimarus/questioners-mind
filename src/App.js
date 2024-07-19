@@ -10,6 +10,8 @@ import Portfolio from './pages/Portfolio';
 import Legacy from './pages/Legacy';
 import Contact from './pages/Contact';
 import ProductRules from './pages/ProductRules';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
