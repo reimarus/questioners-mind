@@ -1,27 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   background-color: var(--primary);
-  color: var(--text);
   padding: 1rem;
-  text-align: center;
 `;
 
-const Title = styled.h1`
-  margin: 0;
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-const Subtitle = styled.p`
-  margin: 0.5rem 0 0;
-  font-style: italic;
+const Logo = styled(Link)`
+  color: var(--text);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+const NavLink = styled(Link)`
+  color: var(--text);
+  text-decoration: none;
+  &:hover {
+    color: var(--accent);
+  }
 `;
 
 function Header() {
   return (
     <HeaderWrapper>
-      <Title>Ryan Oskvarek</Title>
-      <Subtitle className="accent">Personal Blog and Legacy</Subtitle>
+      <Nav>
+        <Logo to="/">Ryan Oskvarek</Logo>
+        <NavLinks>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About Me</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/legacy">Legacy</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/product-rules">Product Rules</NavLink>
+        </NavLinks>
+      </Nav>
     </HeaderWrapper>
   );
 }

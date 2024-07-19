@@ -44,11 +44,28 @@ const Section = styled.section`
   margin-bottom: 2rem;
 `;
 
-const KeyConcepts = styled.section`
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-left: 4px solid var(--primary);
+const KeyConcepts = styled.div`
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 2rem;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    color: var(--text);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const Highlight = styled.strong`
@@ -68,16 +85,10 @@ function Home() {
             <li><Highlight>AI-Human Collaboration:</Highlight> This site is the result of a partnership between advanced AI language models and my own thoughts and experiences.</li>
             <li><Highlight>Legacy LLM Goal:</Highlight> The ultimate aim of this project is to document my perspectives on the world, creating a legacy gift for my children in the form of a fine-tuned Language Learning Model (LLM) based on my personal outlooks and philosophies.</li>
             <li><Highlight>Evolving Philosophies:</Highlight> My thoughts and beliefs are not static. Each piece of content is time-stamped, allowing you to see how my perspectives evolve as I learn and grow, synthesizing new information into updated heuristics.</li>
-            <li><Highlight>Architecture Decision Records:</Highlight> Following best practices from the open-source community, I document my thought processes and decision-making using Architecture Decision Records (ADRs). This approach provides insight into not just what I think, but why and how those thoughts developed.</li>
           </ul>
           
           <p>As you navigate through this site, you'll find a rich tapestry of ideas, experiences, and insights. This is more than just a blog or a portfolio - it's a living document of a life's philosophy, powered by the synergy of human experience and artificial intelligence.</p>
         </KeyConcepts>
-
-        <Section>
-          <h2>Welcome to My Personal Website</h2>
-          <p>This is where I share my thoughts, experiences, and leave a legacy for my children.</p>
-        </Section>
       </ContentWrapper>
     </HomeWrapper>
   );

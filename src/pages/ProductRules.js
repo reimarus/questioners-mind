@@ -19,6 +19,10 @@ const SubTitle = styled.h3`
   color: var(--secondary);
 `;
 
+const SubSubTitle = styled.h4`
+  color: var(--text-muted);
+`;
+
 const List = styled.ul`
   list-style-type: disc;
   padding-left: 2rem;
@@ -44,7 +48,52 @@ function ProductRules() {
         </List>
       </Section>
 
-      {/* Add more sections here for Design Rules, Functionality Rules, etc. */}
+      <Section>
+        <SubTitle>Design Rules</SubTitle>
+        <SubSubTitle>Color Palette:</SubSubTitle>
+        <List>
+          <li>Primary: #1E3A8A (Dark blue)</li>
+          <li>Secondary: #065F46 (Dark green)</li>
+          <li>Accent: #9CA3AF (Medium gray)</li>
+          <li>Background: #111827 (Very dark blue-gray)</li>
+          <li>Text: #E5E7EB (Light gray)</li>
+          <li>Text Muted: #6B7280 (Darker gray for less emphasis)</li>
+        </List>
+        <SubSubTitle>Typography:</SubSubTitle>
+        <p>Use sans-serif fonts throughout the site. The primary font is 'Roboto', with 'Arial' as a fallback.</p>
+      </Section>
+
+      <Section>
+        <SubTitle>Functionality Rules</SubTitle>
+        <SubSubTitle>Core Sections:</SubSubTitle>
+        <List>
+          <li>Home</li>
+          <li>About Me</li>
+          <li>Blog</li>
+          <li>Portfolio</li>
+          <li>Legacy (for children)</li>
+          <li>Contact</li>
+        </List>
+      </Section>
+
+      <Section>
+        <SubTitle>Technical Stack</SubTitle>
+        <List>
+          <li>Frontend: React.js</li>
+          <li>Styling: CSS-in-JS (styled-components)</li>
+          <li>Hosting: TBD</li>
+          <li>Version Control: Git (GitHub)</li>
+        </List>
+      </Section>
+
+      <Section>
+        <SubTitle>SEO Rules</SubTitle>
+        <List>
+          <li>All pages must have unique, descriptive title tags and meta descriptions.</li>
+          <li>Use semantic HTML structure.</li>
+          <li>Implement schema markup where appropriate.</li>
+        </List>
+      </Section>
 
       <Section>
         <SubTitle>AI Collaborator Rules</SubTitle>
