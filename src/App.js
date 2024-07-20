@@ -11,6 +11,11 @@ import ProductRules from './pages/ProductRules';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import NewBlogPost from './pages/NewBlogPost';
+import NewPortfolioProject from './pages/NewPortfolioProject';
+import ProtectedRoute from './components/ProtectedRoute';
+import Admin from './pages/Admin';
+import { AuthProvider } from './context/AuthContext';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -25,24 +30,29 @@ const ContentWrapper = styled.main`
 
 function App() {
   return (
-    <Router>
-      <AppWrapper>
-        <Header />
-        <Navigation />
-        <ContentWrapper>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/legacy" element={<Legacy />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/product-rules" element={<ProductRules />} />
-          </Routes>
-        </ContentWrapper>
-        <Footer />
-      </AppWrapper>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <AppWrapper>
+          <Header />
+          <Navigation />
+          <ContentWrapper>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/legacy" element={<Legacy />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/product-rules" element={<ProductRules />} />
+              <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+              <Route path="/new-blog-post" element={<ProtectedRoute><NewBlogPost /></ProtectedRoute>} />
+              <Route path="/new-portfolio-project" element={<ProtectedRoute><NewPortfolioProject /></ProtectedRoute>} />
+            </Routes>
+          </ContentWrapper>
+          <Footer />
+        </AppWrapper>
+      </Router>
+    </AuthProvider>
   );
 }
 

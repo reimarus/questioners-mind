@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,Navigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useAuth } from '../context/AuthContext';
+
 
 const Nav = styled.nav`
   background-color: var(--secondary);
@@ -29,19 +31,46 @@ const NavLink = styled(Link)`
 `;
 
 function Navigation() {
+  const { isAdmin } = useAuth();
+
   return (
-    <Nav>
-      <NavList>
-        <NavItem><NavLink to="/">Home</NavLink></NavItem>
-        <NavItem><NavLink to="/about">About Me</NavLink></NavItem>
-        <NavItem><NavLink to="/blog">Blog</NavLink></NavItem>
-        <NavItem><NavLink to="/portfolio">Portfolio</NavLink></NavItem>
-        <NavItem><NavLink to="/legacy">Legacy</NavLink></NavItem>
-        <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
-        <NavItem><NavLink to="/product-rules">Product Rules</NavLink></NavItem>
-      </NavList>
-    </Nav>
+    <>
+      {isAdmin && <NavItem><NavLink to="/admin">Admin</NavLink></NavItem>}
+      <Nav>
+        <NavList>
+          {/* Conditionally render the Admin link here */}
+          {isAdmin && ( 
+            <NavItem>
+              <NavLink to="/admin">Admin</NavLink>
+            </NavItem>
+          )} 
+          <NavItem><NavLink to="/">Home</NavLink></NavItem>
+          <NavItem><NavLink to="/about">About Me</NavLink></NavItem>
+          <NavItem><NavLink to="/blog">Blog</NavLink></NavItem>
+          <NavItem><NavLink to="/portfolio">Portfolio</NavLink></NavItem>
+          <NavItem><NavLink to="/legacy">Legacy</NavLink></NavItem>
+          <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
+          <NavItem><NavLink to="/product-rules">Product Rules</NavLink></NavItem>
+        </NavList>
+      </Nav>
+    </>
   );
 }
+
+function Admin() {
+  return (
+    <div>
+      <h2>Admin Panel</h2>
+      <Link to="/new-blog-post">Create New Blog Post</Link>
+      <Link to="/new-portfolio-project">Create New Portfolio Project</Link>
+    </div>
+  );
+}
+
+function ProtectedRoute({ children }) {
+  const { isAdmin } = useAuth(); // Implement this hook
+  return isAdmin ? children : <Navigate to="/login" />;
+}
+
 
 export default Navigation;
