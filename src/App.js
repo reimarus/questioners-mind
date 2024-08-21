@@ -16,6 +16,7 @@ import NewPortfolioProject from './pages/NewPortfolioProject';
 import ProtectedRoute from './components/ProtectedRoute';
 import Admin from './pages/Admin';
 import { AuthProvider } from './context/AuthContext';
+import Login from './pages/Login';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -45,6 +46,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/product-rules" element={<ProductRules />} />
               <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+              <Route path="/login" element={<Login />} />
               <Route path="/new-blog-post" element={<ProtectedRoute><NewBlogPost /></ProtectedRoute>} />
               <Route path="/new-portfolio-project" element={<ProtectedRoute><NewPortfolioProject /></ProtectedRoute>} />
             </Routes>

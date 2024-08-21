@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link,Navigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useAuth } from '../context/AuthContext';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
+
 
 
 const Nav = styled.nav`
@@ -30,8 +31,24 @@ const NavLink = styled(Link)`
   }
 `;
 
+const LogoutButton = styled.button`
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  &:hover {
+    color: var(--accent);
+  }
+`;
+
 function Navigation() {
-  const { isAdmin } = useAuth();
+  const { isAdmin, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <>
@@ -51,6 +68,8 @@ function Navigation() {
           <NavItem><NavLink to="/legacy">Legacy</NavLink></NavItem>
           <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
           <NavItem><NavLink to="/product-rules">Product Rules</NavLink></NavItem>
+          <NavItem><NavLink to="/admin">Admin</NavLink></NavItem>
+          <NavItem><LogoutButton onClick={handleLogout}>Logout</LogoutButton></NavItem>
         </NavList>
       </Nav>
     </>
